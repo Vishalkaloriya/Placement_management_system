@@ -1,0 +1,148 @@
+{% load static %}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Students</title>
+  <link rel="stylesheet" href="{% static 'templates/web/student_page/style.css' %}" />
+  <style>
+    header {
+      display: flex;
+      align-items: center;
+    }
+
+    h1 {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="{% static 'templates/web/Homepage/logo.png' %}" alt="My Website Logo">
+    <h1>Placement Cell</h1>
+    <nav>
+      <ul>
+          <li><a href="{% url 'users:index' %}">Home</a></li>
+          <li>
+            
+              {% if user.is_authenticated %}
+                {% if user.student %}
+                    <a href="{% url 'users:profile' %}" >Profile</a>
+                  {% else %}
+                  <a href="{% url 'users:login' %}" >Login</a>
+                {% endif %}
+              {% else %}
+                    <a href="{% url 'users:login' %}" >Login</a>
+              {% endif %}
+          </li>
+          <li>
+            <a href="{% url 'users:student_register' %}" >Register </a>
+          </li>
+          
+          <li><a href="{% url 'users:contact_us' %}" >Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+        <section id="banner">
+            <h2>For Students</h2>
+            <p>
+            <h3>A collection of resources for students.</h3>
+            </p>
+          </section>
+        <section id="process">
+            <h2> Procedure</h2>
+            <div class="container">
+                <div class="box active">
+                    <div class="number">1</div>
+                    <p>You must prepare a master resume and submit it by the specified deadline.
+                    </p>
+                </div>
+                <div class="box">
+                    <div class="number">2</div>
+                    <p>Before the deadline, the Students' Placement Office must receive the proofs justifying each point
+                        in your resume as well as PVFs (Project Verification Forms) from the project or internship
+                        mentor.
+                    </p>
+                </div>
+                <div class="box">
+                    <div class="number">3</div>
+                    <p>You must register on the Recruitment Automation System (RAS) within the specified timeframe as
+                        notified by SPO.
+                    </p>
+                </div>
+                <div class="box">
+                    <div class="number">4</div>
+                    <p>After you've registered, you are supposed to upload all one/two page resumes on the portal.
+                    </p>
+                </div>
+                <div class="box">
+                    <div class="number">5</div>
+                    <p>The Students' Placement Office appoints a point of contact (PoC) for your resume verification.
+                    </p>
+                </div>
+                <div class="box">
+                    <div class="number">6</div>
+                    <p>You would be assigned a time window during which the allotted POC would verify your resume.</p>
+                </div>
+                <div class="box">
+                    <div class="number">7</div>
+                    <p>Once your resume has been verified, you may begin applying to companies on the RAS in which you
+                        are eligible.</p>
+                </div>
+                <div class="box">
+                    <div class="number">8</div>
+                    <p>Following your application, you must attend all of the company's hiring events (PPTs / Tests /
+                        GDs).</p>
+                </div>
+                <div class="box">
+                    <div class="number">9</div>
+                    <p>If you get an offer from a company, the SPO would notify you and your account would be frozen.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        </div>
+        </div>
+        <footer class="footer">
+            <div class="flex-row">
+              <div>
+                <h1 class="footer-heading">Important Links</h1>
+                <p>
+                  <a href="https://www.iiitg.ac.in/" target="_blank" rel="noreferrer">IIITG Homepage</a>
+                </p>
+                <p class="sc-73e903e5-4 iUCIbg">
+                  <a href="https://www.iiitg.ac.in/student_gymkhana.php" target="_blank" rel="noreferrer">Students' Gymkhana</a>
+                </p>
+              </div>
+              <div>
+                <h1 class="footer-heading">Contact Us</h1>
+                <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-1ha4th6">
+                  <div class="css-xoj6fk"><a </a><a href="https://www.iiitg.ac.in/placements/contact-us.html#reaching_iiitg"
+                        target="_blank" rel="noreferrer">
+                        <p>Training & Placement Cell,<p>
+                          </p>IIIT Guwahati, Bongora,<p>
+                          </p>Guwahati-781015, India</p>
+                      </a></div>
+                  <h3>&copy; 2023 Placement Management System.<h3>
+                      <p> All rights reserved.</p>
+        
+                </div>
+                <br /><br /></span>
+                </p>
+        
+              </div>
+            </div>
+          </footer>
+        
+</body>
+
+</html>
+{% endblock %}

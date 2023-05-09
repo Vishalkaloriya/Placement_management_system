@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block content%}
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/login.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+  	<div class="loginbox">
+	  <form method="post" class="card" novalidate>
+	  		{% csrf_token %}
+			{{ form.as_p }}
+			<input type="submit" value="Login" class="btn btn-primary full-width">
+			<hr>
+			<p class="text-center">Forgot your password <a href="#">Reset Password</a></p>
+			<p class="text-center">Don't have a account? <a href="#">Join Now</a></p>
+		</form>
+	</div>
+</body>
+{%endblock content%}

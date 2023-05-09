@@ -1,0 +1,52 @@
+{% load static %}
+{% load bootstrap3 %}
+{% block content %}
+<html>
+<head>
+	
+	<title>Student Registration</title>
+	{% bootstrap_css %}
+	{% bootstrap_javascript %}    
+	<link rel="stylesheet" type="text/css" href="{% static 'templates/web/student_signup/style.css' %}">
+</head>
+<body>
+    <header>
+		<div class="header-container">
+		  <h1>Sign Up For Student</h1>
+		  <nav>
+			<ul>
+			  <li><a href="{% url 'users:index' %}">Home</a></li>
+			  <li><a href="{% url 'users:index' %}">Sign In</a></li>
+			  <li><a href="{% url 'users:index' %}">Sign Up</a></li>
+			  <li><a href="https:/google.com">Contact Us</a></li>
+			</ul>
+		  </nav>
+		</div>
+	  </header>
+
+	<main>
+		<div class="box">
+			<img
+			src="https://placement.iitk.ac.in/_next/image?url=%2Fimages%2Fsignin.gif&w=1080&q=75"
+			alt="icon-png"
+			/>
+			<div class="container" style="font-size: x-large;">
+				<form method="post" enctype="multipart/form-data" action="{% url 'users:student_register' %}">
+					<h2>Welcome!</h2>
+                    <h2>Sign up </h2>
+					{% csrf_token %}
+    				{% bootstrap_form form  %}
+    				{% buttons %}
+    				<button style="width:100%;background-color:rgb(12, 5, 44);font-size:x-large;" name="submit" class="btn btn-primary">Register</button>
+    				{% endbuttons %}
+    				<input type="hidden" name="next" value="{% url 'users:success' %}"/>
+				</form>
+			</div>
+		</div>
+	</main>
+    <footer>
+        <p>© 2023 Placement Management System. All rights reserved.</p>
+      </footer>
+    </body>
+  </html>
+  {% endblock %}

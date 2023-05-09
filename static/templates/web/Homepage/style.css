@@ -1,0 +1,329 @@
+/* CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+.next-light-theme {
+  --background: 251, 251, 253;
+  --secondBackground: 255, 255, 255;
+  --text: 10, 18, 30;
+  --textSecondary: 255, 255, 255;
+  --primary: 22, 115, 255;
+  --secondary: 10, 18, 30;
+  --tertiary: 231, 241, 251;
+  --cardBackground: 255, 255, 255;
+  --inputBackground: 238, 238, 238;
+  --navbarBackground: 255, 255, 255;
+  --modalBackground: 251, 251, 253;
+  --errorColor: 207, 34, 46;
+  --logoColor: #243a5a;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizespeed;
+  line-height: 1.5;
+  font-family: var(--font);
+  color: rgb(var(--text));
+  background: rgb(var(--background));
+  font-feature-settings: "kern";
+}
+
+:root {
+  --font: "Poppins", sans-serif;
+  --shadow-md: 0 2px 4px 0 rgb(12 0 46 / 4%);
+  --shadow-lg: 0 10px 14px 0 rgb(12 0 46 / 6%);
+  --z-sticky: 7777;
+  --z-navbar: 8888;
+  --z-drawer: 9999;
+  --z-modal: 9999;
+}
+/* Header styles */
+header {
+  /* background-color: hsl(0, 0%, 98%); */
+  background: rgb(63, 114, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 114, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #4b5fcb;
+  color: white;
+}
+header h1 {
+  display: inline-block;
+  margin: 0;
+  margin-left: -420px; /* adjust the margin as needed */
+}
+
+.logo {
+  width: 100px;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #18e830;
+}
+
+/* Main styles */
+main {
+  padding-top: 80px;
+}
+
+#banner {
+  background-image: url("https://png.pngtree.com/background/20210710/original/pngtree-flat-wind-cartoon-recruitment-banner-poster-picture-image_1059574.jpg");
+  background-size: cover;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  color: hsl(0, 2%, 9%);
+  text-align: center;
+  padding: 58px;
+  margin-top: -1.5%;
+}
+
+#banner h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+#banner h3 {
+  color: #7daf22;
+}
+
+#banner p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #008080;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #006666;
+}
+
+#features {
+  padding: 50px;
+  text-align: center;
+}
+
+#features h3 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.feature-box {
+  display: inline-block;
+  width: 30%;
+  margin: 17px;
+  padding: 12px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box h4 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.feature-box p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+#testimonials {
+  background-color: #f9f9f9;
+  padding: 50px;
+  text-align: center;
+}
+
+#testimonials h3 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.testimonial-box {
+  display: inline-block;
+  width: 40%;
+  margin: 20px;
+  padding: 33px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-box blockquote {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.testimonial-box cite {
+  font-size: 1;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #18e830;
+}
+
+.footer {
+  background-color: #455a64;
+  color: white;
+}
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 40px;
+  width: 70vw;
+  margin: auto;
+}
+.footer-heading {
+  color: white;
+  margin: 2px;
+}
+
+#requirements-process {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #dde3e9;
+  padding: 20px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Set the style for the box divs */
+.box {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  background-color: white;
+  flex-basis: calc(33.33% - 20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Set the style for the heading within the box */
+.box h2 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+/* Set the style for the text within the box */
+.box p {
+  font-size: 18px;
+}
+
+/* Set the style for the number within the box */
+.box .number {
+  font-weight: bold;
+  font-size: 4rem;
+  color: #ddd;
+  margin-right: 5px;
+}
+
+/* Set the style for the active box */
+.box.active {
+  border-color: #ddd;
+}
+
+/* Set the style for the active number within the box */
+.box.active .number {
+  color: #ddd;
+}
+
+
+
+.past-recruters-text {
+  font-size: 28px;
+  line-height: 48px;
+  font-weight: 300;
+  margin: 30px 0;
+  text-transform: uppercase;
+  color: #555;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.past-recruters-text span {
+  color: #fa5b0f;
+}
+
+.divider{
+  border: 1px solid #555;
+  width: 65vw;
+  margin-top: 30px;
+}
+
+.past-recruters-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.past-recruters-list > div {
+  margin: 10px;
+}
+

@@ -1,0 +1,76 @@
+{% load static %}
+{% load bootstrap3 %}
+
+{% block header %}
+
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<style>
+body{
+    height: 1000px;
+}
+.login-box{
+    border: 2px solid black;
+    padding: 30px;
+    margin-top: 5%;
+    margin-left: 35%;
+    margin-right: 5%;
+    width: 30%;
+    height: 60%;
+    align-self: auto;
+    font-size: large;
+    
+}
+.login-box button{
+    width: 100%;
+    
+    
+}
+
+.center {
+        width: 200px;
+        height: 200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 25px;
+        
+      }
+
+
+</style>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'Images/iiitg_logo.ico' %}" >
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+{% endblock header %}
+
+
+{% block content %}
+<div class="header">
+    <nav>
+        <img src="{% static 'Images/iiitg_logo.ico' %}" class="logo">
+        <ul class="nav-links">
+            <li><a href="{% url 'users:index' %}">Home</a></li>
+            <li><a href="{% url 'users:company_register' %}">Company</a></li>
+            <li><a href="{% url 'users:student_register' %}">Student</a></li>
+            <li><a href="{% url 'users:student_register' %}">About</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="login-box">
+    <div class="form_header" style="text-align: center;" >
+        <h3>Placement  Cell Account</h3>
+    </div>
+<form method="post" action="{% url 'users:login' %}" class="form">
+    <img src="{% static 'Images/user.png' %}" class="center">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button name="submit" class="btn btn-primary" margin-left="25px" style="background-color:rgb(46, 39, 83);font-size:large;">Login</button>
+    {% endbuttons %}
+    <input type="hidden" name="next" value="{% url 'users:index' %}" />
+    
+</form>
+</div>
+{% endblock content %}

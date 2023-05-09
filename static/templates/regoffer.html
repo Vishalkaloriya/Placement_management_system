@@ -1,0 +1,44 @@
+{% load static %}
+{% load bootstrap3 %}
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block header %}
+        <h2 style="margin-left:20%">Job Registration</h2>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Register New Job</title>
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'Images/iiitg_logo.ico' %}" >
+        <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+        
+        <style>
+            head{
+                height: 200px;
+                color: rgb(176, 206, 228);
+            }
+            .loginbox{
+                margin-left: 5%;
+                width: 50%;
+                font-size: larger;
+            }
+        </style>
+        {% endblock header %}
+    </head>
+<body> 
+    
+<div class="loginbox">
+<form method="post" enctype="multipart/form-data" action="{% url 'users:register_job' %}">
+    {% csrf_token %}
+    {% bootstrap_form form  %}
+    {% buttons %}
+    <button name="submit" class="btn btn-primary">Register</button>
+    {% endbuttons %}
+    <input type="hidden" name="next" value="{% url 'users:index' %}"/>
+</form>
+</div>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% load static %}
+{% load bootstrap3 %}
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Registration</title>
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'Images/iiitg_logo.ico' %}" >
+        <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+        
+        <style>
+            .loginbox{
+                width: 50%;
+                padding-top: 20px;
+                font-size:x-large;
+            }
+        </style>
+    </head>
+<body> 
+    <div class="header">
+        
+        <nav>
+            <img src="{% static 'Images/logo.png' %}" class="logo">
+            <ul class="nav-links">
+                    <li><a href="{% url 'users:index' %}">Home</a></li>
+                    <li><a href="{% url 'users:company' %}">Company</a></li>
+                    <li><a href="{% url 'users:student' %}">Student</a></li>
+                    <li><a href="{% url 'users:index' %}">About</a></li>
+                </ul>
+        </nav>
+    </div>
+<div style="margin-left: 20%;" class="loginbox">
+<form method="post" enctype="multipart/form-data" action="{% url 'users:student_register' %}">
+    {% csrf_token %}
+    {% bootstrap_form form  %}
+    {% buttons %}
+    <button style="margin-left: 20%;width:500px;" name="submit" class="btn btn-primary">Register</button>
+    {% endbuttons %}
+    <input type="hidden" name="next" value="{% url 'users:index' %}"/>
+</form>
+</div>
+</body>
+</html>
+{% endblock %}

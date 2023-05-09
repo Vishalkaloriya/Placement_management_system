@@ -1,0 +1,100 @@
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="{% static 'templates/web/Contact_Us/style.css' %}" />
+  <style>
+    header {
+      display: flex;
+      align-items: center;
+    }
+
+    h1 {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="{% static 'templates/web/Homepage/logo.png' %}" alt="My Website Logo">
+    <h1>Placement Cell</h1>
+    <nav>
+      <ul>
+        <li><a href="{% url 'users:index' %}">Home</a>
+        </li>
+        <li>
+          <a href="{% url 'users:student' %}">Student</a>
+        </li>
+        <li><a href="{% url 'users:company' %}">Company </a></li>
+        
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="banner">
+        <h2>CONTACT </h2>
+        <p>
+        <h3>Feel free to reach out to us!</h3>
+        </p>
+      </section>
+      <section id="features">
+        <div class="feature-box">
+          <h2>Contact Placement Coordinators</h2>
+          <p>
+            <p><span class="label">Phone</span> : +1 (123) 456-7890</p>
+            <a class="email" href="mailto:placementcoordinators@example.com"
+            >coordinators@example.com</a>
+          </p>
+        </div>
+        <div class="feature-box">
+          <h2>Contact Administration</h2>
+          <p>
+            <p><span class="label">Phone</span> : +1 (123) 456-7890</p>
+            <p>
+              <span class="label">Email</span> :
+              <a class="email" href="mailto:administration@example.com"
+                >administration@example.com</a>
+          </p>
+        </div>
+      </section>
+      </section>
+  
+
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <h2>Contact info</h2>
+        <p>Feel free to reach out to us!</p>
+        <div class="form">
+          <h2>Get in Touch</h2>
+          <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" required />
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <input type="submit" value="Send" />
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+
+  <footer class="footer">
+  </a></div>
+  <h3>&copy; 2023 Placement Management System.All rights reserved.</h3>
+
+</div>
+
+</html>
+{% endblock %}

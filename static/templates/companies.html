@@ -1,0 +1,55 @@
+{% load bootstrap3 %}
+{% load static %}
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Companies</title>
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'Images/iiitg_logo.ico' %}" >
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+  <style>
+      table{
+          width: 100%;
+          height: 25px;
+          
+      }
+      td{
+        padding:10px;
+        margin-left: 25px;
+        color: rgb(18, 18, 18);
+      }
+      th{
+        padding:10px;
+        text-align: center;
+        color: rgb(51, 67, 120);
+      }
+      
+      
+  </style>
+</head>
+{% block content %}
+
+{% if companies %}
+    <table border="3">
+    <tr>
+        <th>Name</td>
+        <th>Year</td>
+        <th>Website</td>
+        <th>Type</td>
+        <th>Email</td>
+    </tr>
+    {% for company in companies %}
+    <tr style="padding-left: 100px;">
+        <td>{{ company.Name }}</td>
+        <td>{{ company.Year }}</td>
+        <td><a href="{{ company.Website }}">{{ company.Website}}</a></td>
+        <td>{{ company.Type }}</td>
+        <td>{{ company.Email }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>No company found with above filter.</p>
+{% endif %}
+
+{% endblock %}

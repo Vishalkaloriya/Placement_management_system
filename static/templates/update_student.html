@@ -1,0 +1,58 @@
+{% load bootstrap3 %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+	<head>
+		{% block header %}
+		
+		{% bootstrap_css %}
+        {% bootstrap_javascript %}
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'Images/iiitg_logo.ico' %}" >
+        <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+		<style>
+			.loginbox{
+				margin-top: 5%;
+				margin-left: 35%;
+				width: 30%;
+				padding: 10px;
+				font-size: 20px;
+			}
+			.loginbox select {
+				font-size: 20px;
+			}
+
+			.loginbox input{
+				font-size: 20px;
+			}
+			.loginbox input[type="file"]{
+				
+				width: 500px;
+			}
+			.col-xs-12 a{
+				padding: 20px;
+			}
+			button.right {
+				float: right;
+			  }
+		</style>
+		{% endblock header %}
+	</head>
+	<body> 
+		<div class="loginbox">
+			<h2 style="margin-left:25%;" >Student Update Form</h2>
+			<form method="post" enctype="multipart/form-data" action="{% url 'users:student_update' %}">
+    			{% csrf_token %}
+    			{% bootstrap_form form  %}
+    			{% buttons %}
+				<div class="button-box" style="padding-left: 10px;">
+				<button style="width:25%;" name="cancel" class="btn btn-primary" onClick="javascript.history.go(-1)">Cancel</button>
+    			<button style="width:25%;" name="submit" class="btn btn-primary">Update</button>
+				</div>
+    			{% endbuttons %}
+    			<input type="hidden" name="next" value="{% url 'users:index' %}"/>
+			</form>
+		</div>
+	</body>
+</html>
+{% endblock content %}

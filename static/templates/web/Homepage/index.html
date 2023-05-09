@@ -1,0 +1,289 @@
+{% load static %}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Placement Cell</title>
+  <link rel="stylesheet" href="{% static 'templates/web/Homepage/style.css' %}" />
+  <style>
+    header {
+      display: flex;
+      align-items: center;
+    }
+
+    h1 {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="{% static 'templates/web/Homepage/logo.png' %}" alt="My Website Logo">
+    <h1>Placement Cell</h1>
+    <nav>
+      <ul>
+        <li><a href="{% url 'users:index' %}">Home</a></li>
+        <li><a href="{% url 'users:student' %}">Student</a></li>
+        <li><a href="{% url 'users:company' %}">Company </a></li>
+        <li><a href="{% url 'users:contact_us' %}">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="banner">
+      <h2>Welcome to Placement Cell</h2>
+      <p>
+      <h3>Get the best placements with our experts.</h3>
+      </p>
+    </section>
+    <section id="features">
+      <h3>Our Features</h3>
+      <div class="feature-box">
+        <h4>Customizable Dashboard</h4>
+        <p>
+          Our customizable dashboard makes it easy for you to manage your
+          placement data.
+        </p>
+      </div>
+      <div class="feature-box">
+        <h4>Real-Time Analytics</h4>
+        <p>
+          Get real-time analytics on placements and other important data with
+          our advanced analytics tools.
+        </p>
+      </div>
+      <div class="feature-box">
+        <h4>Automated Placements</h4>
+        <p>
+          Our system uses advanced algorithms to automate the placement
+          process and increase efficiency.
+        </p>
+      </div>
+    </section>
+    </section>
+
+    <section id="testimonials">
+      <h3>Testimonials</h3>
+      <div class="testimonial-box">
+        <blockquote>
+          "The Placement Management System has completely transformed the way
+          we manage our placements. It's easy to use, efficient, and has saved
+          us a lot of time."
+        </blockquote>
+        
+      </div>
+      <div class="testimonial-box">
+        <blockquote>
+          "I highly recommend the Placement Management System to any company
+          looking to streamline their placement process. It's an incredible
+          tool."
+        </blockquote>
+        
+      </div>
+    </section>
+  </main>
+  <div class="container-fluid">
+    <div class="past-recruters-text">
+      <h1><span>Past</span> Recruiters</h1>
+      <div class="divider">
+      
+    </div>
+    </div>
+    
+    <div class="past-recruters-list">
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/1.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/2.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/3.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/4.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/5.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/6.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/7.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/8.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/9.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/10.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/11.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/12.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/13.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/14.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/15.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/16.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/17.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/18.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/19.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/20.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/21.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/22.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/23.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/24.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/25.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/26.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/27.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/28.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/29.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/30.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/31.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/32.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/33.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/34.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/35.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/36.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/37.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/38.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/39.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/40.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/41.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/42.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/43.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/44.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/45.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/46.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/48.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/49.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/50.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/51.jpg">
+                </div>
+                <div class="col-auto mt-2">
+                    <img class="img-responsive" src="https://placement.iitm.ac.in/web/img/compaines/52.jpg">
+                </div>
+            </div>
+        </div>
+
+  <footer class="footer">
+    <div class="flex-row">
+      <div>
+        <h1 class="footer-heading">Important Links</h1>
+        <p>
+          <a href="https://www.iiitg.ac.in/" target="_blank" rel="noreferrer">IIITG Homepage</a>
+        </p>
+        <p class="sc-73e903e5-4 iUCIbg">
+          <a href="https://www.iiitg.ac.in/student_gymkhana.php" target="_blank" rel="noreferrer">Students' Gymkhana</a>
+        </p>
+      </div>
+      <div>
+        <h1 class="footer-heading">Contact Us</h1>
+        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-1ha4th6">
+          <div class="css-xoj6fk"><a </a><a href="https://www.iiitg.ac.in/placements/contact-us.html#reaching_iiitg"
+                target="_blank" rel="noreferrer">
+                <p>Training & Placement Cell,<p>
+                  </p>IIIT Guwahati, Bongora,<p>
+                  </p>Guwahati-781015, India</p>
+              </a></div>
+          <h3>&copy; 2023 Placement Management System.<h3>
+              <p> All rights reserved.</p>
+
+        </div>
+        <br /><br /></span>
+        </p>
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
+{% endblock %}

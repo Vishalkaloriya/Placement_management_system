@@ -1,0 +1,83 @@
+{% load bootstrap3 %}
+{% load static %}
+{% block content %}
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs</title>
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'Images/iiitg_logo.ico' %}" >
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+  <style>
+      .search {
+        margin-top: 50px;
+        margin-left: 20%;
+        margin-bottom: 5%;
+        width: 100%;
+        font-size: 18px;
+      }
+      
+      .student-box{
+        margin-left: 20%;
+        font-size: larger;
+        margin-right: 20%;
+      }
+  </style>
+</head>
+
+<div class="search">
+<form method="post" action="{% url 'users:view_jobs' %}">
+    {% csrf_token %} 
+    <label>Title</label>
+    <input type="text" name="title">
+    <label >Branch</label>
+    <select name="branch">
+        <option value="CSE">CSE</option>
+        <option value="ECE">ECE</option>
+    </select>
+    <button name="submit">Search</button>
+</form>
+</div>
+
+{% if offers %}
+<div class="student-box">
+  <div class="panel panel-default">
+    {% for offer in offers %}
+    <div class="panel-heading">
+    <h2><b>{{ offer.Title }}</b></h2>
+    </div>
+    <div class="panel-body">
+    <h2>Branch</h3>
+    <p>{{ offer.Branch }}</p>
+    <h2>Eligiblity</h3></h2>
+    <p>{{ offer.Eligiblity }}</p>
+    <h2>Salary</h2>
+    <p>{{ offer.Salary }}</p>
+    <h2>Benefits</h2>
+    <p>{{ offer.Benefits }}</p>
+    <h2>Responsiblities</h2>
+    <p>{{ offer.Responsiblities }}</p>
+    <h2>Starting Date</h2>
+    <p>{{ offer.Starting_date }}</p>
+    <h2>Location</h2>
+    <p>{{ offer.Location }}</p>
+    <h2>Exprience</h2>
+    <p>{{ offer.Experience }}</p>
+    <h2>Company</h2>
+    <p>{{ offer.company }}</p>
+    {% if offer.link %}
+    <p><a href="{{ offer.link }}">
+      {% buttons %}
+          <button class="btn btn-primary" style="margin-left:50%;" >Apply</button>
+      {% endbuttons %}
+    {% endif %}
+    </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% else %}
+    <p>No job found with above filter.</p>
+{% endif %}
+
+{% endblock %}

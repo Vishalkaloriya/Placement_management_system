@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-position: center;
+    font-family: sans-serif;
+}
+
+  select {
+    width: 50%;
+    height: 20px;
+    font-size: 15px;
+  }
+  
+option{
+    width: 50%;
+    height: 30px;
+    font-size: 15px;
+}
+
+label {
+    width: 50%;
+    height: 30px;
+    font-size: 15px;
+}
+ 

@@ -1,0 +1,56 @@
+{% load static %}
+{% load bootstrap3 %}
+
+{% block content %}
+
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'templates/web/student_login/style.css' %}" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>Login</h1>
+        <nav>
+          <ul>
+            <li><a href="{% url 'users:index' %}">Home</a></li>
+            <li><a href="{% url 'users:index' %}">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="box">
+        <img
+          src="https://placement.iitk.ac.in/_next/image?url=%2Fimages%2Fsignin.gif&w=1080&q=75"
+          alt="icon-png"
+        />
+
+        <div class="form-container">
+          <h2>Welcome Back!</h2>
+          <h2>Sign In</h2>
+          <form method="post" action="{% url 'users:login' %}">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <input type="submit" value="Sign in " />
+            <input type="hidden" name="next" value="{% url 'users:profile' %}" />
+            <span class="flex-row"
+              >
+              <div><input type="checkbox" /> Remember me</div>
+              </div>
+            </span>
+          </form>
+            
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Copyright © 2023</p>
+    </footer>
+  </body>
+</html>
+{% endblock %}

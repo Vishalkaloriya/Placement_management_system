@@ -1,0 +1,265 @@
+/* CSS reset */
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+/* Header styles */
+header {
+  background-color: hsl(0, 0%, 98%);
+  padding: 5px;
+  margin: 0%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #4b5fcb;
+  color: white;
+}
+header h1 {
+  display: inline-block;
+  margin: 0;
+  margin-left: -530px; /* adjust the margin as needed */
+}
+
+.logo {
+  width: 100px;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+
+nav li {
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+a{
+  color: white;
+  font-weight: bold;
+}
+a:hover {
+  color: rgb(31, 233, 58);
+
+}
+
+/* Main styles */
+main {
+  padding-top: 80px;
+}
+#banner {
+  background-image: url("https://img.freepik.com/free-vector/medical-science-banner-with-text-space_1017-20773.jpg?w=1060&t=st=1680545301~exp=1680545901~hmac=9b9b2436379fbf1af9b8b07fa8404fe0d82d87463828bdc3e6428f4db70d0a46");
+  background-size: cover;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  color: hsl(0, 2%, 9%);
+  text-align: center;
+  padding: 50px;
+  margin-top: -2%;
+}
+
+#banner h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+#banner p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f6f0;
+}
+.box {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+footer {
+  background-color: #ddd;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+.banner {
+  background-color: navy;
+  color: white;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Styling for the procedure box */
+.procedure-box {
+  border: 1px solid black;
+  margin: 20px;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Styling for the procedure numbers */
+.procedure-number {
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+/* Styling for the procedure text */
+.procedure-text {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+* {
+  box-sizing: border-box;
+}
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+user agent stylesheet section {
+  display: block;
+}
+
+#process[_ngcontent-auc-c79] {
+  background: #dde3e9;
+  position: relative;
+}
+.p-5 {
+  padding: 3rem !important;
+}
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#process > h2 {
+  padding-left: 55px;
+  font-size: 2.3em;
+  padding-top: 10px;
+
+}
+/* Set the style for the container div */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Set the style for the box divs */
+.box {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 6px;
+  flex-basis: calc(33.33% - 20px);
+}
+
+/* Set the style for the heading within the box */
+.box h2 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+/* Set the style for the text within the box */
+.box p {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+/* Set the style for the number within the box */
+.box .number {
+  font-size: 40px;
+  font-weight: bold;
+  margin-right: 10px;
+  color: #ddd;
+  display: block;
+}
+
+/* Set the style for the active box */
+.box.active {
+  border-color: #ddd;
+}
+
+/* Set the style for the active number within the box */
+.box.active .number {
+  color: #ddd;
+}
+
+/* Styling for the footer */
+.footer {
+  background-color: #455a64;
+  color: white;
+}
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 10px;
+  width: 70vw;
+  margin: auto;
+}
+.footer-heading {
+  color: white;
+  margin: 2px;
+}
